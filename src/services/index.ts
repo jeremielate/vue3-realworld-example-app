@@ -5,7 +5,7 @@ export const limit = 10
 
 export const api = new Api({
   baseUrl: `${CONFIG.API_HOST}/api`,
-  securityWorker: token => token ? { headers: { authorization: `Bearer ${token}` } } : {},
+  securityWorker: token => token ? { headers: { authorization: `Token ${token}` } } : {},
 })
 
 export function pageToOffset (page: number = 1, localLimit = limit): {limit: number, offset: number} {
